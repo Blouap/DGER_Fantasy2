@@ -3,10 +3,16 @@ package com.example.projet_version1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity {
+
+    private ProgressBar pbPv;
+    private ProgressBar pbNiv;
+    private ProgressBar pbFrc;
+
     public int Nb_tours = 0;
     public Boolean case_active = Boolean.FALSE;
     Joueur joueur = new Joueur();
@@ -63,6 +69,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         while (Nb_tours < 200){
+
+            pbPv = (ProgressBar)findViewById(R.id.pbPv);
+            pbPv.setProgress(Nb_tours);
+            pbPv.setMin(0);
+            pbPv.setMax(30);
             Nb_tours = Nb_tours + 1;
             System.out.println("Tu es au tour " + Nb_tours);
             System.out.println("Le joueur va avancer");
@@ -108,4 +119,6 @@ public class SecondActivity extends AppCompatActivity {
 
         }
     }
+
+
 }

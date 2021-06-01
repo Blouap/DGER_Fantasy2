@@ -9,16 +9,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView commencer;
+    private TextView Commencer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       this.commencer=(TextView)findViewById(R.id.commencer);
+       this.Commencer=(TextView)findViewById(R.id.Commencer);
 
-        commencer.setOnClickListener(new View.OnClickListener() {
+        Commencer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i1=new Intent(getApplicationContext(),ChoixPersonnage.class);
