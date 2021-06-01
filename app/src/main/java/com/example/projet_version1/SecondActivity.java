@@ -13,6 +13,7 @@ public class SecondActivity extends AppCompatActivity {
     public ProgressBar pbPv;
     public TextView NbrNiv;
     public TextView NbrPv;
+    public TextView NbrFrc;
 
 
     public int Nb_tours = 0;
@@ -80,8 +81,11 @@ public class SecondActivity extends AppCompatActivity {
         NbrNiv = (TextView)findViewById(R.id.NbrNiv);
         NbrNiv.setText(String.valueOf(joueur.LVL));
 
-        NbrPv = (TextView)findViewById(R.id.NrbPv);
+        NbrPv = (TextView)findViewById(R.id.NbrPv);
         NbrPv.setText(String.valueOf(joueur.PV)+"/"+String.valueOf(joueur.PV_max));
+
+        NbrFrc = (TextView)findViewById(R.id.NbrFrc);
+        NbrFrc.setText(String.valueOf(joueur.Force));
 
 
 
