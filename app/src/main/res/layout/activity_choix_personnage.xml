@@ -9,17 +9,16 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="267dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="31dp"
+        android:layout_width="285dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/griffy"
         android:gravity="center_horizontal"
         android:text="Choisis ton personnage"
         android:textAlignment="center"
         android:textColor="#8E0E0E"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
