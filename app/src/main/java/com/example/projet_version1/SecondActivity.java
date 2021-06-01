@@ -4,18 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private ProgressBar pbPv;
-    private ProgressBar pbNiv;
-    private ProgressBar pbFrc;
+    public ProgressBar pbPv;
+    public TextView NbrNiv;
+    public TextView NbrPv;
+
 
     public int Nb_tours = 0;
     public Boolean case_active = Boolean.FALSE;
-    Joueur joueur = new Joueur();
+    public Joueur joueur;
+
 
 
     void Decouverte_Case(){
@@ -67,57 +70,25 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Joueur joueur = new Joueur();
 
-        while (Nb_tours < 200){
+        pbPv = (ProgressBar)findViewById(R.id.pbPv);
+        pbPv.setProgress(joueur.PV);
+        pbPv.setMin(0);
+        pbPv.setMax(joueur.PV_max);
 
-            pbPv = (ProgressBar)findViewById(R.id.pbPv);
-            pbPv.setProgress(Nb_tours);
-            pbPv.setMin(0);
-            pbPv.setMax(30);
-            Nb_tours = Nb_tours + 1;
-            System.out.println("Tu es au tour " + Nb_tours);
-            System.out.println("Le joueur va avancer");
-            joueur.Se_deplacer();
+        NbrNiv = (TextView)findViewById(R.id.NbrNiv);
+        NbrNiv.setText(String.valueOf(joueur.LVL));
 
-            if (joueur.position >= 30){
-                Victoire();
-                break;
-            }
-
-            Decouverte_Case();
-
-            while (case_active = Boolean.TRUE){
-                String choix = "";
-                Monstre monstre_actif = listeMonstres.get(listeMonstres.size()-1);
-                System.out.println("Que voulez vous faire?");
+        NbrPv = (TextView)findViewById(R.id.NrbPv);
+        NbrPv.setText(String.valueOf(joueur.PV)+"/"+String.valueOf(joueur.PV_max));
 
 
-                if (choix == "TAPER"){
-                    joueur.Attaquer(monstre_actif);
-                    if (monstre_actif.PV <= 0) {
-                        case_active = Boolean.FALSE;
-                    }
-                }
-
-                if (choix == "POTION"){
-                    joueur.Prendre_Potion();
-                }
-
-                if (choix == "FUIR"){
-                    joueur.Fuir();
-                    case_active = Boolean.FALSE;
-                }
-
-                monstre_actif.Attaquer(joueur);
-                if (joueur.PV <= 0){
-                    System.out.println("T'es mort boloss");
-                    Defaite();
-                    break;
-                }
-            }
 
 
-        }
+
+
+
     }
 
 
