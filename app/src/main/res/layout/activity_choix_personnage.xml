@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wp3392652"
+    tools:context=".ChoixPersonnage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="267dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="31dp"
+        android:fontFamily="@font/griffy"
+        android:gravity="center_horizontal"
+        android:text="Choisis ton personnage"
+        android:textAlignment="center"
+        android:textColor="#8E0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Mage"
+        android:layout_width="276dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="273dp"
+        android:fontFamily="@font/griffy"
+        android:text="Mage"
+        app:backgroundTint="#1022B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Paladin"
+        android:layout_width="276dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/griffy"
+        android:text="Paladin"
+        app:backgroundTint="#1022B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Guerrier"
+        android:layout_width="276dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/griffy"
+        android:text="Guerrier"
+        app:backgroundTint="#1022B8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
